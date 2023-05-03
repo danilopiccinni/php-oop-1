@@ -1,7 +1,10 @@
 <?php 
 
+// richiedo il file php riguardante la classe Film
 require_once './Models/Movie.php';
+// richiedo il file php riguardante la classe Serie
 require_once './Models/Serie.php';
+// richiedo il file php riguardante il database
 require_once 'db.php';
 
 ?>
@@ -13,24 +16,23 @@ require_once 'db.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    <!-- font awesome -->
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
-    
-    
+    <!-- boostrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    
+    <!-- css -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <!-- nav bar -->
     <?php include './Partials/nav.php' ?>
 
     <div class="titolo">
         <h1>Stream numero uno del burundi</h1>
     </div>
 
+    <!-- sezione della tabella dei film -->
     <h2>Lista film</h2>
-    
     <table class="table table-dark table-striped">
         <thead>
                 <th scope="col">Id</th>
@@ -63,7 +65,9 @@ require_once 'db.php';
             ?>
         </tbody>
     </table>
+    <!-- /sezione della tabella dei film -->
 
+    <!-- sezione della tabella delle serie tv -->
     <h2>Lista Serie TV</h2>
     <table class="table table-dark table-striped">
         <thead>
@@ -97,10 +101,12 @@ require_once 'db.php';
             ?>
         </tbody>
     </table>
+    <!-- /sezione della tabella delle serie tv -->
 
+    <!-- footer -->
     <?php include './Partials/footer.php' ?>
 
-
+<!-- bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
 </body>
