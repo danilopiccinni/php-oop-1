@@ -2,9 +2,9 @@
 
 require_once './Models/Movie.php';
 
-$movies[] = new Movie ('avenger', 'avenger', 'pinko', '2000', 'blablalvlballbalala');
-$movies[] = new Movie ('spiderman', 'spider', 'pallo', '2222', 'blalvlalalfldlalsdlasdldas');
-$movies[] = new Movie ('hulk', 'hulk', 'kaio', '1950', 'blalvlalalfldlalsdlasdldasasdasdsadasdasds');
+$movies[] = new Movie ('avenger', 'avenger', 'pinko', ['azione' , 'divertente'] ,'2000', 'blablalvlballbalala');
+$movies[] = new Movie ('spiderman', 'spider', 'pallo', ['comico'] ,'2222', 'blalvlalalfldlalsdlasdldas');
+$movies[] = new Movie ('hulk', 'hulk', 'kaio', ['drammatico' , 'azione'] ,'1950', 'blalvlalalfldlalsdlasdldasasdasdsadasdasds');
 
 
 ?>
@@ -24,6 +24,7 @@ $movies[] = new Movie ('hulk', 'hulk', 'kaio', '1950', 'blalvlalalfldlalsdlasdld
             <th>Titolo</th>
             <th>Titolo Originale</th>
             <th>Regista</th>
+            <th>Genere</th>
             <th>Anno di Produzione</th>
             <th>Descrizione</th>
             <th>Vecchio</th>
@@ -37,6 +38,7 @@ $movies[] = new Movie ('hulk', 'hulk', 'kaio', '1950', 'blalvlalalfldlalsdlasdld
                 <td><?php echo $movie->titolo ?></td>
                 <td><?php echo $movie->titoloOriginale ?></td>
                 <td><?php echo $movie->regista ?></td>
+                <td><?php foreach($movie->generi as $genere) echo $genere . '<br>'?></td>
                 <td><?php echo $movie->annoProduzione ?></td>
                 <td><?php echo $movie->descrizione ?></td>
                 <td><?php echo $movie->isOld == true ? 'si' : 'no' ?></td>

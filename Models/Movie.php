@@ -4,17 +4,19 @@ class Movie {
     public $titolo;
     public $titoloOriginale;
     public $regista;
+    public $generi;
     public $annoProduzione;
     public $descrizione;
     public $isOld;
     public static $tipo = "Film";
 
-    public function __construct( string $titolo, string $titoloOriginale, string $regista,  string $annoProduzione , string $descrizione ) {
+    public function __construct( string $titolo, string $titoloOriginale, string $regista, array $genere,  string $annoProduzione , string $descrizione ) {
 
         $this->titolo = $titolo;
         $this->titoloOriginale = $titoloOriginale;
         $this->annoProduzione = $annoProduzione;
         $this->regista = $regista;
+        $this->generi = $genere;
         $this->annoProduzione = $annoProduzione;
         $this->descrizione = $descrizione;
         $this->isOld = self::isOld($annoProduzione);
